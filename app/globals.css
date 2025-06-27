@@ -1,26 +1,154 @@
 @import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  position: relative;
+  scroll-behavior: smooth;
+  caret-color: #ff9898;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../public/background.jpg") no-repeat center center / cover;
+  opacity: 0.25;
+  z-index: -1;
+  pointer-events: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 8px;
+  background-color: #e7e7e7;
+  border: 1px solid #cacaca;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #ff9898;
+}
+::selection {
+  background: #ff9898;
+  color: #fff;
+}
+#cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #ff9898;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference; /* key to make text visible behind */
+  transition: background-color 0.2s ease, width 0.3s ease, height 0.3s ease;
+}
+.holographic-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.holographic-card {
+  width: 230px;
+  height: 230px;
+  background: #ff9898;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.holographic-card h2 {
+  color: white;
+  font-size: 2rem;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  font-weight: 600;
+}
+
+.holographic-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    transparent 30%,
+    rgba(255, 255, 255, 0.2)
+  );
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+.holographic-card:hover::before {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(100%);
+}
+
+@keyframes teleport-up {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes teleport-down {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  51% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.teleport-on-hover {
+  animation: teleport-down 0.8s ease-in-out forwards;
+  transition: none;
+}
+
+.group:hover .teleport-on-hover {
+  animation: teleport-up 0.8s ease-in-out forwards;
 }
