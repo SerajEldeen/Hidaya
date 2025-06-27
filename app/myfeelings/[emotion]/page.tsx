@@ -15,13 +15,7 @@ type Emotion = {
   quotes: Quote[];
 };
 
-interface PageProps {
-  params: {
-    emotion: string;
-  };
-}
-
-function page({ params }: PageProps) {
+export default function Page({ params }: { params: { emotion: string } }) {
   const currEmotion: Emotion | undefined = emotions.find(
     (e) => e.route === params.emotion
   );
@@ -85,5 +79,3 @@ function page({ params }: PageProps) {
     </>
   );
 }
-
-export default page;

@@ -11,15 +11,11 @@ type Habbit = {
   leading: string[];
 };
 
-interface PageProps {
-  params: {
-    habbit: string;
-  };
-}
-function page({ params }: PageProps) {
+export default function Page({ params }: { params: { habbit: string } }) {
   const currHabbit: Habbit | undefined = habbits.find(
     (e) => e.route === params.habbit
   );
+
   if (!currHabbit) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen p-10 text-center">
@@ -75,5 +71,3 @@ function page({ params }: PageProps) {
     </div>
   );
 }
-
-export default page;
