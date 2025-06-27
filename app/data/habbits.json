@@ -1,7 +1,7 @@
 [
   {
     "name": "waking up early",
-    "photoSrc": "/waking-up-early.jpg",
+    "photoSrc": "/waking-up-early.png",
     "route": "waking-up-early",
     "value": "الأستيقاظ مبكرا",
     "usefulValue": [
@@ -17,7 +17,7 @@
   },
   {
     "name": "exercise",
-    "photoSrc": "/exercise.jpg",
+    "photoSrc": "/exercise.png",
     "route": "exercise",
     "value": "الرياضة",
     "usefulValue": [
@@ -34,7 +34,7 @@
   },
   {
     "name": "teamwork",
-    "photoSrc": "/teamwork.jpg",
+    "photoSrc": "/teamwork.png",
     "route": "teamwork",
     "value": "العمل الجماعي",
     "usefulValue": [
@@ -51,7 +51,7 @@
   },
   {
     "name": "meditation",
-    "photoSrc": "/meditation.jpg",
+    "photoSrc": "/meditation.png",
     "route": "meditation",
     "value": "التأمل",
     "usefulValue": [
@@ -68,7 +68,7 @@
   },
   {
     "name": "persistence",
-    "photoSrc": "/persistence.jpg",
+    "photoSrc": "/persistence.png",
     "route": "persistence",
     "value": "السعي و الاستمرارية",
     "usefulValue": [
@@ -85,7 +85,7 @@
   },
   {
     "name": "time-management",
-    "photoSrc": "/time-management.jpg",
+    "photoSrc": "/time-management.png",
     "route": "time-management",
     "value": "إدارة الوقت",
     "usefulValue": [
@@ -103,7 +103,7 @@
   },
   {
     "name": "stretches",
-    "photoSrc": "/stretches.jpg",
+    "photoSrc": "/stretches.png",
     "route": "stretches",
     "value": "التمدد",
     "usefulValue": [

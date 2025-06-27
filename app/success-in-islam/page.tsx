@@ -18,11 +18,11 @@ function page() {
               <div
                 className="relative w-48 h-48 overflow-hidden rounded-full
               transition-transform duration-500 ease-in-out hover:scale-110 
-              group cursor-pointer bg-[#FFE8CD]"
+              group cursor-pointer bg-transparent hover:bg-orange-50"
               >
                 <Image
-                  src={e.photoSrc}
                   fill
+                  src={e.photoSrc}
                   alt={e.name}
                   className="object-cover absolute inset-0 w-full h-full rounded-full teleport-on-hover"
                 />

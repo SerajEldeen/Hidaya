@@ -41,7 +41,7 @@ const MovingText = () => {
 
   return (
     <div className="flex justify-center items-center p-10 mt-2">
-      <div className="text-2xl sm:text-3xl leading-10 text-[#FFA673] text-center max-w-[800px] sm:h-[70px] h-[120px] font-bold">
+      <div className="text-2xl sm:text-3xl leading-10 text-neutral-400 text-center max-w-[800px] sm:h-[70px] h-[120px] font-extrabold">
         {displayText}
       </div>
     </div>

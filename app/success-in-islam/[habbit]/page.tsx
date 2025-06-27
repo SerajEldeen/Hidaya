@@ -56,7 +56,7 @@ export default function Page({ params }: { params: { habbit: string } }) {
         <h2 className="font-semibold text-[#FF9898] mb-10">
           🕋 ما الذي سبق إليه الإسلام؟
         </h2>
-        <p className="font-extrabold text-[#FFA673] text-3xl text-center">
+        <p className="font-extrabold text-neutral-400 text-3xl text-center">
           &ldquo;{currHabbit.verse}&quot;
         </p>
 
