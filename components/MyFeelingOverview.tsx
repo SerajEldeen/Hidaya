@@ -22,7 +22,7 @@ function MyFeelingOverview() {
           768: { slidesPerView: 3.1 },
         }}
         dir="rtl"
-        className="w-full max-w-[850px]"
+        className=" w-[90%] sm:w-full max-w-[850px]"
       >
         {emotionOverview.map((emotion) => (
           <SwiperSlide key={emotion.name}>
