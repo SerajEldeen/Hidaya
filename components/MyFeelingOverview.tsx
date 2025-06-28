@@ -14,7 +14,7 @@ function MyFeelingOverview() {
       <h3 className="text-[#FF9898] text-xl font-bold mb-4">احساسى</h3>
 
       <Swiper
-        spaceBetween={10}
+        spaceBetween={1}
         slidesPerView={1.1}
         loop={true}
         breakpoints={{

@@ -52,15 +52,6 @@ body::before {
   mix-blend-mode: difference; /* key to make text visible behind */
   transition: background-color 0.2s ease, width 0.3s ease, height 0.3s ease;
 }
-.holographic-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 2rem;
-}
-
 .holographic-card {
   width: 230px;
   height: 230px;
